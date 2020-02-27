@@ -1,0 +1,12 @@
+@keyframes blink {
+    0% {border: solid 1px white}
+    50% {border: solid 1px white}
+    51% {border: solid 1px transparent}
+    100% {border: solid 1px transparent}
+}
+.typeWriter.typeWriter-cursor::after{
+    content: "";
+    animation-name: blink;
+    animation-duration: .75s;
+    animation-iteration-count: infinite;
+}
