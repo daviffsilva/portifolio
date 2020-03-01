@@ -91,6 +91,9 @@ li.nav-item > a:hover{
     font-weight: bolder;
     overflow-wrap: break-word;
 }
+.section-content{
+    height: fit-content;
+}
 .scroll-trigger.active{
     transform: scale(1.1);
 }
