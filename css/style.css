@@ -1,0 +1,113 @@
+*{
+    font-family: 'Noto Sans JP',sans-serif;
+}
+body{
+    overflow-x: hidden;
+    background-color: black;
+}
+:root{
+    --bg-size: cover;
+    --bg-attachment: fixed;
+}
+.fixed-top{
+    position: fixed;
+    top: 0;
+    margin: 0 auto 0 auto;
+}
+.bg-black{
+    background: rgba(0,0,0,1)!important;
+}
+@keyframes a {
+    from {transform: translateY(0px)}
+    to {transform: translateY(10px)}
+}
+.spin{
+    animation-name: a;
+    animation-duration: 1s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+.fullPage{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+
+}
+.bg-navbar{
+    background: rgba(0,0,0,.75);
+    width: fit-content;
+    border-radius: 5px;
+    transition: all .25s ease-in-out;
+}
+.bg{
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    filter: blur(5px);
+}
+.bg.bg-1{
+    background: url('../img/bg1.jpg') var(--bg-attachment);
+    background-size: var(--bg-size);
+    filter: blur(5px);
+}
+.bg.bg-2{
+    background: url('../img/bg2.jpg') var(--bg-attachment);
+    background-size: var(--bg-size);
+    filter: blur(5px) brightness(.25);
+}
+.bg.bg-3{
+    background: url('../img/bg3.jpg') var(--bg-attachment);
+    background-size: var(--bg-size);
+    filter: brightness(.5) blur(5px);
+}
+.bg.bg-4{
+    background: url('../img/bg4.jpg') var(--bg-attachment);
+    background-size: var(--bg-size);
+    filter: brightness(.5) blur(5px);
+}
+li.nav-item > a{
+    transition: transform .25s ease-in-out;
+}
+li.nav-item > a:hover{
+    transform: scale(1.1);
+}
+.no-radius{
+    border-radius: 0px;
+}
+.w-0{
+    overflow-x: hidden;
+    width: 0;
+}
+.navbar-spacer{
+    height: 0;
+    transition: height .25s ease;
+}
+.section-title{
+    text-transform: uppercase;
+    font-weight: bolder;
+    overflow-wrap: break-word;
+}
+.scroll-trigger.active{
+    transform: scale(1.1);
+}
+.flex-column > .navbar-brand{
+    margin: 0!important;
+}
+.links span{
+    margin-top: 10px;
+}
+.links i{
+    transition: color .25s ease-in-out;
+}
+.links a{
+    color: grey;
+}
+.links i:hover{
+    color: grey;
+}
+.sub-experience + .sub-experience{
+    margin-top: 1rem;
+}
