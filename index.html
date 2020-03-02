@@ -309,6 +309,10 @@
         })
     });
 
+    $("button.navbar-toggler").click(()=>{
+        $(".navbar-spacer").css("height", $("#navbar").height() + "px");
+    });
+
     window.addEventListener('resize', ()=>{
         $("a[href].scroll-trigger").each((k,v)=>{
             $(v).unbind();
@@ -321,9 +325,11 @@
         });
     });
 
+
+
     $(window).scroll(function () {
         if(sw && $(window).scrollTop() >= $("#sobre").offset().top){
-            $(".navbar-spacer").css("height", $("#navbar").height() + "px");
+
             return false;
         }
 
