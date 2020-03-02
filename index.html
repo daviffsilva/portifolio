@@ -323,6 +323,7 @@
 
     $(window).scroll(function () {
         if(sw && $(window).scrollTop() >= $("#sobre").offset().top){
+            $(".navbar-spacer").css("height", $("#navbar").height() + "px");
             return false;
         }
 
